@@ -63,7 +63,7 @@
   // --- Contact form (mailto) ---
   var form = document.getElementById('contact-form');
 
-  form.addEventListener('submit', function (e) {
+  if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     var name = document.getElementById('name').value.trim();

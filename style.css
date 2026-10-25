@@ -12,6 +12,7 @@
   --gray-100: #f3f4f6;
   --white: #ffffff;
   --bg: #fafafa;
+  --green-text: #1b7a52;
   --radius: 12px;
   --radius-sm: 8px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
@@ -588,6 +589,112 @@ img {
   opacity: 1;
 }
 
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  list-style: none;
+}
+
+.footer__legal a {
+  color: var(--white);
+  font-size: 0.85rem;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.footer__legal a:hover {
+  opacity: 1;
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* ===========================
+   Pages légales
+   =========================== */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 88px 24px 80px;
+  overflow-wrap: break-word;
+}
+
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--gray-900);
+}
+
+.legal__back:hover {
+  color: var(--green-text);
+}
+
+.legal h1 {
+  font-size: 2rem;
+  margin: 16px 0 8px;
+}
+
+.legal__date {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.legal h2 {
+  font-size: 1.25rem;
+  margin: 32px 0 12px;
+}
+
+.legal p,
+.legal li {
+  color: var(--gray-900);
+}
+
+.legal p {
+  margin-bottom: 12px;
+}
+
+.legal ul {
+  padding-left: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.legal li {
+  margin-bottom: 6px;
+}
+
+.legal strong {
+  color: var(--black);
+}
+
+.legal p a,
+.legal li a {
+  color: var(--green-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.not-found {
+  text-align: center;
+  padding-top: 140px;
+  min-height: 70vh;
+}
+
+.not-found__icon {
+  color: var(--gray-600);
+}
+
+.not-found p {
+  color: var(--gray-600);
+  margin-bottom: 32px;
+}
+
 /* ===========================
    Scroll animations
    =========================== */
@@ -681,6 +788,21 @@ img {
   .contact__content {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .footer__legal a {
+    display: inline-block;
+    padding: 12px 0;
+  }
+
+  .legal h1 {
+    font-size: 1.7rem;
   }
 }
 
